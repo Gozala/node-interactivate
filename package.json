@@ -1,0 +1,45 @@
+{
+  "name": "node-interactivate",
+  "id": "node-interactivate",
+  "version": "0.0.1",
+  "description": "Interactive code editing for node",
+  "keywords": [
+    "node-interactivate"
+  ],
+  "author": "Irakli Gozalishvili <rfobic@gmail.com> (http://jeditoolkit.com)",
+  "homepage": "https://github.com/Gozala/node-interactivate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gozala/node-interactivate.git",
+    "web": "https://github.com/Gozala/node-interactivate"
+  },
+  "bugs": {
+    "url": "http://github.com/Gozala/node-interactivate/issues/"
+  },
+  "devDependencies": {
+    "test": "~0.x.0",
+    "phantomify": "~0.x.0",
+    "repl-utils": "~1.0.0"
+  },
+  "main": "./main.js",
+  "bin": {
+    "interactivate": "./bin/interactivate.js"
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/browserify/bin/cmd.js --exports require --debug --entry ./main.js --outfile ./build.js",
+    "start": "node ./server.js"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Gozala/node-interactivate/License.md"
+    }
+  ],
+  "dependencies": {
+    "browserify": "~1.16.6",
+    "shoe": "0.0.7",
+    "require-like": "~0.1.2",
+    "ecstatic": "~0.3.0",
+    "interactivate": "~0.2.0"
+  }
+}
