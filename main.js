@@ -1,6 +1,7 @@
 "use strict";
 
 var Editor = require("interactivate/core")
+var persist = require("interactivate/code-mirror/persist")
 var host = require("./host")
 
 var editor = Editor(document.body, {
@@ -19,6 +20,9 @@ var editor = Editor(document.body, {
     }
   }
 })
+
+// Enable cross-session persistence
+persist(editor)
 
 host(editor).on("connect", function() {
   editor.setValue(editor.getValue())
