@@ -39,7 +39,7 @@
     "browserify": "~1.16.6",
     "shoe": "0.0.7",
     "require-like": "~0.1.2",
-    "ecstatic": "~0.3.0",
+    "ecstatic": "~3.1.1",
     "interactivate": "~0.2.0"
   }
 }
